@@ -1,17 +1,19 @@
 <?php
-namespace Sitegeist\KlarSchiff\ViewHelpers;
+namespace Sitegeist\KlarSchiff\EelHelpers;
 
 use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3\Eel\ProtectedContextAwareInterface;
 use Sitegeist\KlarSchiff\Service\CacheBusterService;
 
-class CacheBusterViewHelper extends  AbstractViewHelper
+class CacheBusterHelper implements ProtectedContextAwareInterface
 {
+
     /**
      * @Flow\Inject
      * @var CacheBusterService
      */
     protected $cacheBusterService;
+
 
     /**
      * Generate a unique cache buster for the given identifier
@@ -21,9 +23,12 @@ class CacheBusterViewHelper extends  AbstractViewHelper
      * @param string $identifier
      * @return string
      */
-    public function render($identifier = 'default')
-    {
+    public function getById($identifier = 'default') {
         return $this->cacheBusterService->getCacheBusterIdentifier($identifier);
+    }
+
+    public function allowsCallOfMethod($methodName) {
+        return TRUE;
     }
 
 }

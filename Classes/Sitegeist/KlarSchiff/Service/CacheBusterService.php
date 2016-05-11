@@ -15,10 +15,7 @@ class CacheBusterService
      * @param string $identifier
      * @return string
      */
-    public function getCacheBusterIdentifier ($identifier = NULL) {
-        if ($identifier == NULL || $identifier == '') {
-            $identifier = 'default';
-        }
+    public function getCacheBusterIdentifier ($identifier = 'default') {
         if ($this->cacheBusterIdCache->has($identifier)) {
             return ($this->cacheBusterIdCache->get($identifier));
         } else {

@@ -1,4 +1,4 @@
 TYPO3:
   TypoScript:
     defaultContext:
-      SitegeistKlarSchiffCacheBuster: 'Sitegeist\KlarSchiff\Eel\CacheBusterHelper'
+      SitegeistKlarSchiffCacheBuster: 'Sitegeist\KlarSchiff\EelHelpers\CacheBusterHelper'
