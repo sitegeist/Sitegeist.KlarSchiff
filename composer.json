@@ -2,6 +2,7 @@
     "name": "sitegeist/klarschiff",
     "type": "typo3-flow-package",
     "description": "Flow Package to avoid browser caching for updated resources",
+    "license": "GPL-3.0+",
     "require": {
         "typo3/flow": "*"
     },
