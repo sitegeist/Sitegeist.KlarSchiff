@@ -1,0 +1,13 @@
+{
+    "name": "sitegeist/klarschiff",
+    "type": "typo3-flow-package",
+    "description": "Flow Package to avoid browser caching for updated resources",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sitegeist\\KlarSchiff": "Classes"
+        }
+    }
+}

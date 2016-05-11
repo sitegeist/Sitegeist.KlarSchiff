@@ -1,0 +1,9 @@
+'Sitegeist\KlarSchiff\Service\CacheBusterService':
+  properties:
+    cacheBusterIdCache:
+      object:
+        factoryObjectName: TYPO3\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: Sitegeist_KlarSchiff_CacheBusterIdentifierCache
