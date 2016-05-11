@@ -16,6 +16,7 @@ by our employer http://www.sitegeist.de.*
 
 #### ViewHelper klarSchiff:CacheBuster 
 ```
+{namespace klarSchiff=Sitegeist\KlarSchiff\ViewHelpers}
 <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'resource://Vendor.Site/Public/Styles/Main.css')}?cb={klarSchiff:CacheBuster(identifier:'default')}">
 ```
 #### Eel Helper
