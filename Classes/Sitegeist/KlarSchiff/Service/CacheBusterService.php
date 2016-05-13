@@ -19,7 +19,7 @@ class CacheBusterService
         if ($this->cacheBusterIdCache->has($identifier)) {
             return ($this->cacheBusterIdCache->get($identifier));
         } else {
-            $value = md5(rand());
+            $value = \TYPO3\Flow\Utility\Algorithms::generateUUID();
             $this->cacheBusterIdCache->set($identifier, $value);
             return $value;
         }
