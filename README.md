@@ -25,7 +25,7 @@ by our employer http://www.sitegeist.de.*
 value = 'http://www.vandor.site.tld/some_path'
 value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuster:getById('default')}
 ```
-### Reser cache
+### Reset cache
 
 ```
 ./flow cache:flushone Sitegeist_KlarSchiff_CacheBusterIdentifierCache
