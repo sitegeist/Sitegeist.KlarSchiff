@@ -1,8 +1,8 @@
 <?php
 namespace Sitegeist\KlarSchiff\EelHelpers;
 
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Eel\ProtectedContextAwareInterface;
+use Neos\Flow\Annotations as Flow;
+use Neos\Eel\ProtectedContextAwareInterface;
 use Sitegeist\KlarSchiff\Service\CacheBusterService;
 
 class CacheBusterHelper implements ProtectedContextAwareInterface

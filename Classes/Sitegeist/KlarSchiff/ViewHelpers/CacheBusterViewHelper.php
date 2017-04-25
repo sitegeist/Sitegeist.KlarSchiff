@@ -1,8 +1,8 @@
 <?php
 namespace Sitegeist\KlarSchiff\ViewHelpers;
 
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper;
+use Neos\Flow\Annotations as Flow;
+use Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper;
 use Sitegeist\KlarSchiff\Service\CacheBusterService;
 
 class CacheBusterViewHelper extends  AbstractViewHelper
