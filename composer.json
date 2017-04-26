@@ -1,14 +1,14 @@
 {
     "name": "sitegeist/klarschiff",
-    "type": "typo3-flow-package",
+    "type": "neos-package",
     "description": "Flow Package to avoid browser caching for updated resources",
     "license": "GPL-3.0+",
     "require": {
-        "typo3/flow": "*"
+        "neos/flow": "~4.0"
     },
     "autoload": {
-        "psr-0": {
-            "Sitegeist\\KlarSchiff": "Classes"
+        "psr-4": {
+            "Sitegeist\\KlarSchiff\\": "Classes"
         }
     },
     "extra": {
