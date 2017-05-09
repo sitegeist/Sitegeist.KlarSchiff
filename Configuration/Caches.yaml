@@ -1,4 +1,4 @@
 Sitegeist_KlarSchiff_CacheBusterIdentifierCache:
   persistent: TRUE
-  frontend: TYPO3\Flow\Cache\Frontend\VariableFrontend
-  backend: TYPO3\Flow\Cache\Backend\FileBackend
+  frontend: Neos\Cache\Frontend\VariableFrontend
+  backend: Neos\Cache\Backend\FileBackend

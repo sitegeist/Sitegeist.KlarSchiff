@@ -1,13 +1,13 @@
 <?php
 namespace Sitegeist\KlarSchiff\Service;
 
-use TYPO3\Flow\Annotations as Flow;
+use Neos\Flow\Annotations as Flow;
 
 class CacheBusterService
 {
     /**
      * @Flow\Inject
-     * @var \TYPO3\Flow\Cache\Frontend\VariableFrontend
+     * @var \Neos\Cache\Frontend\VariableFrontend
      */
     protected $cacheBusterIdCache;
 
@@ -19,7 +19,7 @@ class CacheBusterService
         if ($this->cacheBusterIdCache->has($identifier)) {
             return ($this->cacheBusterIdCache->get($identifier));
         } else {
-            $value = \TYPO3\Flow\Utility\Algorithms::generateUUID();
+            $value = \Neos\Flow\Utility\Algorithms::generateUUID();
             $this->cacheBusterIdCache->set($identifier, $value);
             return $value;
         }
