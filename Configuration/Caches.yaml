@@ -1,4 +1,5 @@
 Sitegeist_KlarSchiff_CacheBusterIdentifierCache:
-  persistent: TRUE
   frontend: Neos\Cache\Frontend\VariableFrontend
   backend: Neos\Cache\Backend\FileBackend
+  backendOptions:
+    defaultLifetime: 31536000
