@@ -18,12 +18,12 @@ by our employer http://www.sitegeist.de.*
 
 ```
 {namespace klarSchiff=Sitegeist\KlarSchiff\ViewHelpers}
-<link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'resource://Vendor.Site/Public/Styles/Main.css')}?cb={klarSchiff:CacheBuster(identifier:'default')}">
+<link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'resource://Vendor.Site/Public/Styles/Main.css')}?cb={klarSchiff:CacheBuster()}">
 ```
 ### Eel-Helper SitegeistKlarSchiffCacheBuster
 ```
 value = 'http://www.vandor.site.tld/some_path'
-value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuster:getById('default')}
+value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuster:get()}
 ```
 ### Reset cache
 

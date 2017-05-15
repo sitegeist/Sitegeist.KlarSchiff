@@ -14,6 +14,17 @@ class CacheBusterHelper implements ProtectedContextAwareInterface
      */
     protected $cacheBusterService;
 
+    /**
+     * Generate a unique cache buster for the given identifier
+     * the idenifier is changed whenever the cache
+     * Sitegeist_KlarSchiff_CacheBusterIdentifierCache is flushed
+     *
+     * @param string $identifier
+     * @return string
+     */
+    public function get($identifier = 'default') {
+        return $this->cacheBusterService->getCacheBusterIdentifier($identifier);
+    }
 
     /**
      * Generate a unique cache buster for the given identifier
@@ -24,7 +35,7 @@ class CacheBusterHelper implements ProtectedContextAwareInterface
      * @return string
      */
     public function getById($identifier = 'default') {
-        return $this->cacheBusterService->getCacheBusterIdentifier($identifier);
+        return $this->get($identifier);
     }
 
     public function allowsCallOfMethod($methodName) {
