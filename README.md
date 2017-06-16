@@ -33,20 +33,5 @@ value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuste
 
 ### Installation 
 
-in jour composer .json add the following lines
-```
-{
-    ...
-    "repositories": [{
-    {
-        "url": "ssh://git@git.sitegeist.de:40022/sitegeist/Sitegeist.KlarSchiff.git",
-        "type": "vcs"
-    }],
-    "require": {
-        ...
-        "sitegeist/klarschiff": "@dev",
-        ...
-    }
-    ...
-}
-```
+PackageFactory.AtomicFusion is available via packagist. Just run `composer require sitegeist/klarschiff`.
+We use semantic-versioning so every breaking change will increase the major-version number.
