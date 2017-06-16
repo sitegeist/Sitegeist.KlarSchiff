@@ -23,7 +23,7 @@ by our employer http://www.sitegeist.de.*
 ### Eel-Helper SitegeistKlarSchiffCacheBuster
 ```
 value = 'http://www.vandor.site.tld/some_path'
-value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuster:get()}
+value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuster.get()}
 ```
 ### Reset cache
 
