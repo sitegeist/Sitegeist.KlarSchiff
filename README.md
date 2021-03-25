@@ -24,12 +24,17 @@ by our employer http://www.sitegeist.de.*
 ```
 value = 'http://www.vandor.site.tld/some_path'
 value.@process.addCacheBuster = ${value + '?cb=' + SitegeistKlarSchiffCacheBuster.get()}
+value.@process.addCacheBuster.@if.isEnabled = ${SitegeistKlarSchiffCacheBuster.isEnabled()}
 ```
 ### Reset cache
 
 ```
 ./flow cache:flushone Sitegeist_KlarSchiff_CacheBusterIdentifierCache
 ```
+### Configuration
+
+The path `Sitegeist.KlarSchiff.enabled` in Settings.yaml allows to disable the cacheBusting. 
+All identifiers will be "" in that case. 
 
 ### Installation 
 

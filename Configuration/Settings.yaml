@@ -3,3 +3,7 @@ Neos:
   Fusion:
     defaultContext:
       SitegeistKlarSchiffCacheBuster: Sitegeist\KlarSchiff\EelHelpers\CacheBusterHelper
+
+Sitegeist:
+  KlarSchiff:
+    enabled: true
