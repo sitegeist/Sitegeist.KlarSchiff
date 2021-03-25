@@ -4,7 +4,8 @@
     "description": "Flow Package to avoid browser caching for updated resources",
     "license": "GPL-3.0+",
     "require": {
-        "neos/flow": "~4.0 || ~5.0 || ~6.0 || ~7.0 || dev-master"
+        "php": ">=7.1.0",
+        "neos/flow": "~5.0 || ~6.0 || ~7.0 || dev-master"
     },
     "autoload": {
         "psr-4": {

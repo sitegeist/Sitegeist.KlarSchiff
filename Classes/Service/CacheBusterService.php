@@ -12,10 +12,20 @@ class CacheBusterService
     protected $cacheBusterIdCache;
 
     /**
+     * @Flow\InjectConfiguration(path="enabled")
+     * @var
+     */
+    protected $enabled;
+
+    /**
      * @param string $identifier
      * @return string
      */
-    public function getCacheBusterIdentifier ($identifier = 'default') {
+    public function getCacheBusterIdentifier ($identifier = 'default'): string
+    {
+        if (!$this->enabled) {
+            return '';
+        }
         if ($this->cacheBusterIdCache->has($identifier)) {
             return ($this->cacheBusterIdCache->get($identifier));
         } else {
