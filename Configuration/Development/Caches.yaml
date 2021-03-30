@@ -1,0 +1,4 @@
+
+Sitegeist_KlarSchiff_CacheBusterIdentifierCache:
+  backendOptions:
+    defaultLifetime: 5
