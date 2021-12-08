@@ -14,16 +14,26 @@ class CacheBusterViewHelper extends  AbstractViewHelper
     protected $cacheBusterService;
 
     /**
+     * Initialize the arguments.
+     *
+     * @return void
+     * @api
+     */
+    public function initializeArguments()
+    {
+        $this->registerArgument('identifier', 'string', 'identifier', false, 'default');
+    }
+    
+    /**
      * Generate a unique cache buster for the given identifier
      * the idenifier is changed whenever the cache
      * Sitegeist_KlarSchiff_CacheBusterIdentifierCache is flushed
      *
-     * @param string $identifier
      * @return string
      */
-    public function render($identifier = 'default')
+    public function render()
     {
-        return $this->cacheBusterService->getCacheBusterIdentifier($identifier);
+        return $this->cacheBusterService->getCacheBusterIdentifier($this->arguments['identifier']);
     }
 
 }
